@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Reingeniería</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Reingeniería</div>
+        <br>
+        <form>
+            <input type="text" id="P4" placeholder="Costo de Mantenimiento después de Reingeniería" style="width : 300px; heigth : 1px">
+            <br>
+            <br>
+            <input type="text" id="P5" placeholder="Costo de Operación después de Reingeniería" style="width : 300px; heigth : 1px">
+            <br>
+            <br>
+            <input type="text" id="P6" placeholder="Valor empresarial después de Reingeniería" style="width : 300px; heigth : 1px">
+            <br>
+            <br>
+            <input type="text" id="P7" placeholder="Costo estimado del proyecto" style="width : 300px; heigth : 1px">
+            <br>
+            <br>
+            <input type="text" id="P8" placeholder="tiempo estimado" style="width : 300px; heigth : 1px">
+            <br>
+            <br>
+            <h4>Factor de Riesgo de la Reingeniería</h4>
+            <input type="text" id="P9" readonly="readonly" style="width : 300px; heigth : 1px" value = "1">
+            <br>
+            <br>
+            <input type="text" id="L" placeholder="vida esperada del sistema" style="width : 300px; heigth : 1px">
+            <br>
+            <br>
+            <input type="button" onclick="calcularDatos()" value="Calcular">
+        </form>
+        
+        
+    </body>
+    
+</html>
+<script>
+    function calcularDatos() {
+     var P4 = document.getElementById("P4").value;
+     console.log(P4);
+     var P5 = document.getElementById("P5").value;
+     console.log(P5);
+     var P6 = document.getElementById("P6").value;
+     console.log(P6);
+     var P7 = document.getElementById("P7").value;
+     console.log(P7);
+     var P8 = document.getElementById("P8").value;
+     console.log(P8);
+     var P9 = 1;
+     console.log(P9);
+     var L = document.getElementById("L").value; 
+     console.log(L);
+     var result = (P6 - (P4 - P5) * (L - P8) - (P7 * P9));
+     console.log(result);
+    }
+            
+</script>

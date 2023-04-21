@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Costo de Mantenimiento Actual</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Mantenimiento</div>
+    <form>
+        <input type="text" id="P1" placeholder="Costo de mantenimineto actual" style="width : 300px; heigth : 1px">
+        <br>
+        <br>
+        <input type="text" id="P2" placeholder="Costo de operación actual" style="width : 300px; heigth : 1px">
+        <br>
+        <br>
+        <input type="text" id="P3" placeholder="Valor empresarial actual de una aplicación (anual)" style="width : 300px; heigth : 1px">
+        <br>
+        <br>
+        <input type="text" id="L" placeholder="vida esperada del sistema" style="width : 300px; heigth : 1px">
+        <br>
+        <br>
+        <input type="button" onclick="calcularDatos()" value="Calcular">
+    </form>
+           
+    </body>
+   
+</html>
+<script>
+    function calcularDatos() {
+     var P4 = document.getElementById("P1").value;
+     console.log(P1);
+     var P5 = document.getElementById("P2").value;
+     console.log(P2);
+     var P6 = document.getElementById("P3").value;
+     console.log(P3);
+     var L = document.getElementById("L").value; 
+     console.log(L);
+     var result = ((P3 - (P1 + P2)) * L);
+     console.log(result);
+    }
+            
+</script>
